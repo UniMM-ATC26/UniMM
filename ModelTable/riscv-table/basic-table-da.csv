@@ -1,0 +1,16 @@
+﻿,,,Diff Addr,Diff Addr,Diff Addr,Diff Addr,Diff Addr,Diff Addr,Diff Addr,Diff Addr,Diff Addr,Diff Addr,Diff Addr,Diff Addr
+Inst,,,load,store,lr,lr.aq,lr.aqrl,sc,sc.rl,sc.aqrl,amo,amo.aq,amo.rl,amo.aqrl
+,Event,,R,W,R,R,R,W,W,W,R;W,R;W,R;W,R;W
+,,Event_barrier,,,Atomic,Atomic;Aq,Atomic;Aq;Rl,Atomic,Atomic;Rl,Atomic;Aq;Rl,Atomic,Atomic;Aq,Atomic;Rl,Atomic;Aq;Rl
+load,R,,,,,,V,,V,V,,,V,V
+store,W,,,,,,V,,V,V,,,V,V
+lr,R,Atomic,,,,,V,,V,V,,,V,V
+lr.aq,R,Atomic;Aq,V,V,V,V,V,V,V,V,V,V,V,V
+lr.aqrl,R,Atomic;Aq;Rl,V,V,V,V,V,V,V,V,V,V,V,V
+sc,W,Atomic,,,,,V,,V,V,,,V,V
+sc.rl,W,Atomic;Rl,,,,V,V,,V,V,,V,V,V
+sc.aqrl,W,Atomic;Aq;Rl,V,V,V,V,V,V,V,V,V,V,V,V
+amo,R;W,Atomic,,,,,V,,V,V,,,V,V
+amo.aq,R;W,Atomic;Aq,V,V,V,V,V,V,V,V,V,V,V,V
+amo.rl,R;W,Atomic;Rl,,,,V,V,,V,V,,V,V,V
+amo.aqrl,R;W,Atomic;Aq;Rl,V,V,V,V,V,V,V,V,V,V,V,V

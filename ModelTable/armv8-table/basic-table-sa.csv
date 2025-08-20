@@ -1,0 +1,17 @@
+﻿,,,Same Addr,Same Addr,Same Addr,Same Addr,Same Addr,Same Addr,Same Addr,Same Addr,Same Addr,Same Addr,Same Addr,Same Addr,Same Addr
+Inst,,,LDR,STR,LDAR,LDAPR,LDXR,LDAXR,STLR,STXR,STLXR,amo,amo.aq,amo.rl,amo.aqrl
+,Event,,R,W,R,R,R,R,W,W,W,R;W,R;W,R;W,R;W
+,,Event_barrier,,,Aq,Aqpc,Atomic,Atomic;Aq,Rl,Atomic,Atomic;Rl,Atomic,Atomic;Aq,Atomic;Rl,Atomic;Aq;Rl
+LDR,R,,,V,,,,,V,V,V,V,V,V,V
+STR,W,,,V,,,,,V,V,V,V,V,V,V
+LDAR,R,Aq,V,V,V,V,V,V,V,V,V,V,V,V,V
+LDAPR,R,Aqpc,V,V,V,V,V,V,V,V,V,V,V,V,V
+LDXR,R,Atomic,,V,,,,,V,V,V,V,V,V,V
+LDAXR,R,Atomic;Aq,V,V,V,V,V,V,V,V,V,V,V,V,V
+STLR,W,Rl,,V,V,,,V,V,V,V,V,V,V,V
+STXR,W,Atomic,,V,,,,,V,V,V,V,V,V,V
+STLXR,W,Atomic;Rl,,V,V,,,V,V,V,V,V,V,V,V
+amo,R;W,Atomic,,V,,,,,V,V,V,V,V,V,V
+amo.aq,R;W,Atomic;Aq,V,V,V,V,V,V,V,V,V,V,V,V,V
+amo.rl,R;W,Atomic;Rl,,V,V,,,V,V,V,V,V,V,V,V
+amo.aqrl,R;W,Atomic;Aq;Rl,V,V,V,V,V,V,V,V,V,V,V,V,V

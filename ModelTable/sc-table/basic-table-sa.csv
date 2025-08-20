@@ -1,0 +1,6 @@
+﻿,,,Same Addr,Same Addr
+Inst,,,load,store
+,Event,,R,W
+,,Event_barrier,NA,NA
+load,R,NA,V,V
+store,W,NA,V,V

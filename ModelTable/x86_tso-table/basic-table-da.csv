@@ -1,0 +1,7 @@
+﻿,,,Diff Addr,Diff Addr,Diff Addr
+Inst,,,load,store,RMW
+,Event,,R,W,R;W
+,,Event_barrier,NA,NA,Atomic
+load,R,NA,V,V,V
+store,W,NA,,V,V
+RMW,R;W,Atomic,V,V,V

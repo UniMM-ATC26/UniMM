@@ -1,0 +1,5 @@
+﻿Inst,,,load,store
+,Event,,R,W
+,,Event_barrier,NA,NA
+load,R,NA,,V
+store,W,NA,,V
