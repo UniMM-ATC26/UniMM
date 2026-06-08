@@ -1,5 +1,5 @@
 Require Import UniMMProofs.riscv.
-Require Import UniMMProofs.riscv_mt_subset.
+Require Import UniMMProofs.riscv_mt_equiv.
 
 
 
@@ -54,6 +54,14 @@ Proof.
   - exfalso.
     apply Hno_fence_e1.
     exact Hfence_e1.
+Qed.
+
+Lemma rule2_in_R_R_sa: forall (E : set Event) (e1 e2 : Event),
+  rule2 E e1 e2 -> R_R_sa E e1 e2.
+Proof.
+  intros E e1 e2 H.
+  unfold rule2, R_R_sa in *.
+  auto.
 Qed.
 
 
@@ -141,5 +149,21 @@ Lemma rule11_in_DpCtrl: forall (E : set Event) (e1 e2 : Event),
 Proof.
   intros E e1 e2 H.
   unfold DpCtrl, rule11 in *. 
+  auto.
+Qed.
+
+Lemma rule12_in_M_W_R: forall (E : set Event) (e1 e2 : Event),
+  rule12 E e1 e2 -> M_W_R E e1 e2.
+Proof.
+  intros E e1 e2 H.
+  unfold M_W_R, rule12 in *.
+  auto.
+Qed.
+
+Lemma rule13_in_M_M_W: forall (E : set Event) (e1 e2 : Event),
+  rule13 E e1 e2 -> M_M_W E e1 e2.
+Proof.
+  intros E e1 e2 H.
+  unfold M_M_W, rule13 in *.
   auto.
 Qed.

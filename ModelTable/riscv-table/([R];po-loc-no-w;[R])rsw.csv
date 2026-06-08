@@ -1,0 +1,18 @@
+﻿tab_po-loc-no-w \ (tab_rf^-1;tab_rf),,,,,
+tab_po-loc-no-w,Inst,,,load,store
+,,Event,,R,W
+,,,Event_barrier,NA,NA
+,load,R,NA,V,
+,store,W,NA,,
+,,,,,
+tab_rf^-1,Inst,,,load,store
+,,Event,,R,W
+,,,Event_barrier,NA,NA
+,load,R,NA,,V
+,store,W,NA,,
+,,,,,
+tab_rf^-1,Inst,,,load,store
+,,Event,,R,W
+,,,Event_barrier,NA,NA
+,load,R,NA,,
+,store,W,NA,V,

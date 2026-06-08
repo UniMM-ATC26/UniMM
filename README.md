@@ -15,7 +15,7 @@ The `proofs` directory contains the correctness proofs for the memory model gap-
 
 In this directory, `riscv.v` specifies the RISC-V Cat model using [Rocq Prover](https://rocq-prover.org/), and `x86.v` specifies the x86 Cat model. 
 
-For the gap-bridging scheme from x86 to RISC-V, `riscv_mt_subset.v` proves that the RISC-V ModelTables are a subset of its Cat model, while `x86_mt_equiv.v` proves that the x86 ModelTables are equivalent to its Cat model. As shown by Algorithm 4 in the paper, the gap-bridging scheme is obtained by subtracting the RISC-V ModelTables from the x86 ModelTables, thereby imposing stricter ordering constraints than actually required. In other words, the gap-bridging scheme does not compromise the correctness of program execution on RISC-V.
+For the gap-bridging scheme from x86 to RISC-V, `riscv_mt_equiv.v` proves that the RISC-V ModelTables are equivalent to its its Cat model, while `x86_mt_equiv.v` proves that the x86 ModelTables are equivalent to its Cat model. As shown by Algorithm 4 in the paper, the gap-bridging scheme is obtained by subtracting the RISC-V ModelTables from the x86 ModelTables, thereby imposing stricter ordering constraints than actually required. In other words, the gap-bridging scheme does not compromise the correctness of program execution on RISC-V.
 
 `riscv_mt_compliance_testing.v` proves the correctness of using the RISC-V ModelTables for compliance testing.
 

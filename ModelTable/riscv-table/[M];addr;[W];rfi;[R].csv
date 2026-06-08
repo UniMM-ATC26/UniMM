@@ -1,0 +1,12 @@
+﻿tab_dp_addr;tab_rfi,,,,,
+tab_dp_addr,Inst,,,load,store
+,,Event,,R,W
+,,,Event_barrier,NA,NA
+,load,R,NA,V,V
+,store,W,NA,V,V
+,,,,,
+tab_rfi,Inst,,,load,store
+,,Event,,R,W
+,,,Event_barrier,NA,NA
+,load,R,NA,,
+,store,W,NA,V,
